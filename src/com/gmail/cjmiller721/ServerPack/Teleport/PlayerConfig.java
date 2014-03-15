@@ -17,9 +17,11 @@ public class PlayerConfig extends Config implements Comparable<PlayerConfig>{
 		this.username = player;
 	}
 	
+	public long lastTeleport = 0;
+	
 	public String username = "temp";
 	
-	public Set<String> friends = new HashSet<String>();
+	private Set<String> friends = new HashSet<String>();
 	
 	public boolean addFriend(String username){
 		return friends.add(username);

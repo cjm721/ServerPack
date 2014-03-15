@@ -14,7 +14,6 @@ import com.gmail.cjmiller721.ServerPack.Teleport.PlayerConfig;
 public class Teleport implements Listener{
 
 	public static HashMap<String, PlayerConfig> players;
-	public static HashMap<String, Long> times;
 	
 	public Teleport(){
 		Teleport.players = new HashMap<String, PlayerConfig>();

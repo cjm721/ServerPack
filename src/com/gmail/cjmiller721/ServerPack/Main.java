@@ -2,11 +2,11 @@ package com.gmail.cjmiller721.ServerPack;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.cjmiller721.ServerPack.Commands.PlayerTime;
+import com.gmail.cjmiller721.ServerPack.Commands.PlayerWeather;
+import com.gmail.cjmiller721.ServerPack.Commands.WorkBench;
 import com.gmail.cjmiller721.ServerPack.Listeners.AntiPVPLog;
 import com.gmail.cjmiller721.ServerPack.Listeners.Mystcraft;
-import com.gmail.cjmiller721.VIPPack.Commands.PlayerTime;
-import com.gmail.cjmiller721.VIPPack.Commands.PlayerWeather;
-import com.gmail.cjmiller721.VIPPack.Commands.WorkBench;
 
 public class Main extends JavaPlugin {
 

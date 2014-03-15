@@ -47,6 +47,6 @@ clog-message: "{playername} &acombat logged to death!"
 # +------------------------------------------------------------+ #
 ##################################################################
 
-
-TPACoolDown: 
+#Cooldown in seconds
+TPACoolDown: 600
 

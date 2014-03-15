@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -88,6 +89,7 @@ public class AntiPVPLog implements Listener{
 		
 		if(Tag.get(event.getPlayer().getName()).equals("true")){
 			event.setCancelled(true);
+			event.getPlayer().sendMessage(ChatColor.RED + "You are still in combat.");
 		}
 	}
 	
