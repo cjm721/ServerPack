@@ -67,7 +67,7 @@ public class AntiPVPLog implements Listener{
 	{
 		if ((Tag.containsKey(event.getPlayer().getName())) && 
 				(((String)Tag.get(event.getPlayer().getName())).equals("true"))) {
-			event.getPlayer().setHealth(0);
+			event.getPlayer().setHealth(0.0);
 			String tag = Main.plugin.getConfig().getString("clog-message");
 			tag = tag.replace("&", "§");
 			tag = tag.replace("{playername}", event.getPlayer().getName());

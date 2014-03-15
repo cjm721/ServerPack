@@ -13,6 +13,6 @@ public class Request {
 		this.fromUsername = from;
 		this.toUsername = to;
 		this.type = t;
-		this.sendTime = System.nanoTime();
+		this.sendTime = System.currentTimeMillis();
 	}
 }

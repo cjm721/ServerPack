@@ -1,19 +1,27 @@
-main: com.gmail.cjmiller721.VIPPack.Main
-name: VIPPack
+main: com.gmail.cjmiller721.ServerPack.Main
+name: ServerPack
 version: 1.0
 author: CJ Miller
-description: Rewards for donating to Free the Beast
+description: Contains all the basic funcionality of the Free the Beast Server
 commands:
     ptime:
         description: Sets the player's time to the given input.
         usage: /<command> [reset|set] (time) (true|false)
-        permission: vippack.time
+        permission: serverPack.time
     pweather:
         description: Sets the player's weather to the given input.
         usage: /<command> [reset|set] (clear|rain)
-        permission: vippack.weather
+        permission: serverPack.weather
     workbench:
         description: Opens up the 3x3 crafting window.
         usage: /<command>
-        permission: vippack.bench
+        permission: serverPack.bench
+    tpa:
+        description: All Teleportation commands.
+        usage: /[tpa|tpahere|tpaccept] (Player)
+        permission: serverPack.tpa
+        aliases: [tpahere, tpaccept]
+    friend:
+        description: Adds ability to add/remove friends for the tpa system.
+        usage: /<command> [add|remove] [Player]
 

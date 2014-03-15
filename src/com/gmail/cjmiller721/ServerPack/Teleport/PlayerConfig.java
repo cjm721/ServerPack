@@ -7,13 +7,14 @@ import java.util.Set;
 import com.gmail.cjmiller721.ServerPack.Main;
 
 import net.cubespace.Yamler.Config.Config;
+import net.cubespace.Yamler.Config.InvalidConfigurationException;
 
 public class PlayerConfig extends Config implements Comparable<PlayerConfig>{
 
 
 	public PlayerConfig(String player) {
 		CONFIG_HEADER = new String[]{"Configuration of the Database for " + player};
-		CONFIG_FILE = new File(Main.plugin.getDataFolder(), "\\players\\" + player + ".yml");
+		CONFIG_FILE = new File(Main.plugin.getDataFolder(), "/players/" + player + ".yml");
 		this.username = player;
 	}
 	
@@ -38,5 +39,14 @@ public class PlayerConfig extends Config implements Comparable<PlayerConfig>{
 	@Override
 	public int compareTo(PlayerConfig o) {
 		return this.username.compareTo(o.username);
+	}
+	
+	public void saveConfig(){
+		try {
+			this.save();
+		} catch(InvalidConfigurationException ex) {
+			System.out.println("Error in saving the Config YML");
+			ex.printStackTrace();
+		}
 	}
 }

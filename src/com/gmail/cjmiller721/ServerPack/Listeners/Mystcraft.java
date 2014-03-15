@@ -12,6 +12,7 @@ public class Mystcraft implements Listener{
 
 	
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onInteract(PlayerInteractEvent event){
 		if(event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getClickedBlock().getTypeId() == Main.plugin.getConfig().getInt("Mystcraft.BinderID") 
