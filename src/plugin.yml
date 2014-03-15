@@ -1,0 +1,19 @@
+main: com.gmail.cjmiller721.VIPPack.Main
+name: VIPPack
+version: 1.0
+author: CJ Miller
+description: Rewards for donating to Free the Beast
+commands:
+    ptime:
+        description: Sets the player's time to the given input.
+        usage: /<command> [reset|set] (time) (true|false)
+        permission: vippack.time
+    pweather:
+        description: Sets the player's weather to the given input.
+        usage: /<command> [reset|set] (clear|rain)
+        permission: vippack.weather
+    workbench:
+        description: Opens up the 3x3 crafting window.
+        usage: /<command>
+        permission: vippack.bench
+

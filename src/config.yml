@@ -1,0 +1,52 @@
+##################################################################
+# +------------------------------------------------------------+ #
+# |                   GroupMystCraft Config                    | #
+# +------------------------------------------------------------+ #
+##################################################################
+
+MystcraftEnabled: false
+
+#Set id to -1 to disable checking for Book binder
+Mystcraft.BinderID: -1
+
+
+##################################################################
+# +------------------------------------------------------------+ #
+# |                 AntiCombatActions Config                   | #
+# +------------------------------------------------------------+ #
+##################################################################
+
+
+AntiPVPEnabled: true
+
+#NOTE: Do NOT put tabs anywhere in the config!
+
+#How many seconds until the player is no longer tagged for combat log 
+#Don't put this too low                                               
+                                                                                                 
+tag-time: 10
+
+#The message that will be sent to the player when they get tagged
+
+tag-message: "&7You are now in combat!"
+
+
+#The message that will be sent to the player when they are no longer tagged
+
+untag-message: "&7You are no longer in combat!"
+
+
+#The message that will be broadcasted when a player combat logs
+
+clog-message: "{playername} &acombat logged to death!"
+
+
+##################################################################
+# +------------------------------------------------------------+ #
+# |                 Teleportation Config                       | #
+# +------------------------------------------------------------+ #
+##################################################################
+
+
+TPACoolDown: 
+
