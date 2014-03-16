@@ -97,8 +97,8 @@ public class Tpa implements CommandExecutor{
 
 		PlayerConfig configB = Teleport.players.get(arg0.getName());
 
-		if((System.currentTimeMillis() - configB.lastTeleport)/1E9 < Main.plugin.getConfig().getInt("TPACoolDown") ){
-			int secondsLeft = (int) (Main.plugin.getConfig().getInt("TPACoolDown") - (System.currentTimeMillis() - configB.lastTeleport)/1E3);
+		int secondsLeft = (int) (Main.plugin.getConfig().getInt("TPACoolDown") - (System.currentTimeMillis() - configB.lastTeleport)/1E3);
+		if(secondsLeft > 0){
 			arg0.sendMessage(ChatColor.RED + arg2[0] + " is still on cooldown. " + secondsLeft + " seconds untill " + arg2[0] + " can use it again.");
 			return true;
 		}
