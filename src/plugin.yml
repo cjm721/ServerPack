@@ -23,5 +23,5 @@ commands:
         aliases: [tpahere, tpaccept]
     friend:
         description: Adds ability to add/remove friends for the tpa system.
-        usage: /<command> [add|remove] [Player]
+        usage: /<command> [add|remove|list] (Player)
 

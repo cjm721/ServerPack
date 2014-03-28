@@ -36,6 +36,9 @@ public class Friend implements CommandExecutor{
 			else
 				arg0.sendMessage(ChatColor.RED + arg3[1] + " was not a friend.");
 			return true;
+		}else if(arg3[0].equalsIgnoreCase("list")){
+			arg0.sendMessage(ChatColor.GOLD + "Friends: " + config.getFriends());
+			return true;
 		}
 
 		return false;

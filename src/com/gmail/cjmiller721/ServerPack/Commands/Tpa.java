@@ -122,7 +122,7 @@ public class Tpa implements CommandExecutor{
 
 	private boolean isFriends(String a, String b){
 		PlayerConfig pA = Teleport.players.get(a);
-		PlayerConfig pB = Teleport.players.get(a);
+		PlayerConfig pB = Teleport.players.get(b);
 
 		if(pA == null || pB == null)
 			return false;
