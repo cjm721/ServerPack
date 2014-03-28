@@ -47,7 +47,25 @@ clog-message: "{playername} &acombat logged to death!"
 # +------------------------------------------------------------+ #
 ##################################################################
 
+TeleportationEnabled: true
+
 #Cooldown in seconds
 TPACoolDown: 3600
 
 TPATimeout: 10
+
+
+##################################################################
+# +------------------------------------------------------------+ #
+# |                         AntiAFK                            | #
+# +------------------------------------------------------------+ #
+##################################################################
+
+AntiAFKEnabled: true
+
+#Time in seconds to kick after.
+AntiAFKKickTime: 600
+
+#Increment to scan at.
+AntiAFKScanTime: 60
+

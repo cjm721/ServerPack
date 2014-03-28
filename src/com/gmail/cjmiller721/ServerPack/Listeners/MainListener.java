@@ -16,7 +16,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.gmail.cjmiller721.ServerPack.Main;
 
-public class AntiPVPLog implements Listener{
+public class MainListener implements Listener{
 	public static Map<String, String> Tag = new HashMap<String, String>();
 	public static Map<String, Long> Time = new HashMap<String, Long>();
 
@@ -25,6 +25,12 @@ public class AntiPVPLog implements Listener{
 	{
 		if(event.getEntity() == null || event.getDamager() == null)
 			return;
+		
+		//---------------------
+		//Anti PVP Log
+		//---------------------
+		
+		//Deffender
 		if ((event.getEntity() instanceof Player)) {
 			Player p = (Player)event.getEntity();
 			Time.put(p.getName(), Long.valueOf(System.currentTimeMillis()));
@@ -43,7 +49,8 @@ public class AntiPVPLog implements Listener{
 
 			Tag.put(p.getName(), "true");
 		}
-
+		
+		//Offender
 		if ((event.getDamager() instanceof Player)) {
 			Player p = (Player)event.getDamager();
 			if(p.getName() == null || Tag.get(p.getName()) == null){
@@ -65,6 +72,8 @@ public class AntiPVPLog implements Listener{
 	@EventHandler
 	public void onPlayerLogout(PlayerQuitEvent event)
 	{
+		
+		//Remove tag from AntiPvP log
 		if ((Tag.containsKey(event.getPlayer().getName())) && 
 				(((String)Tag.get(event.getPlayer().getName())).equals("true"))) {
 			event.getPlayer().setHealth(0.0);
@@ -73,12 +82,20 @@ public class AntiPVPLog implements Listener{
 			tag = tag.replace("{playername}", event.getPlayer().getName());
 			Bukkit.broadcastMessage(tag.replace('&', '§'));
 		}
+		
+		//Remove from AFK check.
+		AntiAFK.removePlayer(event.getPlayer().getName());
 	}
 
 	@EventHandler
 	public void onPlayerJoin(PlayerLoginEvent event)
 	{
+		
+		//AntiPVP add to main list
 		Tag.put(event.getPlayer().getName(), "false");
+		
+		//AntiAFK
+		AntiAFK.addPlayer(event.getPlayer().getName());
 	}
 	
 	
