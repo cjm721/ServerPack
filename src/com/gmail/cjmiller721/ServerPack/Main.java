@@ -92,7 +92,7 @@ public class Main extends JavaPlugin {
 				public void run() {
 					long currentTime = System.currentTimeMillis();
 					for(String name: AntiAFK.playerTimes.keySet()){
-						if(AntiAFK.playerTimes.get(name) + kickTime < currentTime){
+						if(AntiAFK.playerTimes.get(name) + (kickTime*1000) < currentTime){
 							getServer().getPlayer(name).kickPlayer("AFK time limit.");
 						}
 					}
